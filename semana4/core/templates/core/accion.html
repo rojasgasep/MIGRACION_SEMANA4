@@ -1,15 +1,17 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+  <link rel="stylesheet" src="{% static 'core/css/style.css'%}">
   <title>Game on Categoria Accion</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <br>
-<body id="fondo" background="img/background.png">
+<body id="fondo" background="{% static 'core/img/background.png'%}">  
 
   <!--BOTÓN PARA ACCEDER AL REGISTRO-->
   <div class="login-container" style="position: absolute; right: 3rem; top: 1rem; z-index: 999;">
@@ -21,14 +23,14 @@
   <!-- SCRIPT PARA ABRIR FORMULARIO DE REGISTRO EN OTRA PESTAÑA-->
   <script>
     function openRegistro(event) {
-      event.preventDefault(); // Evita que el formulario se envíe
-      window.open('registro.html', '_blank'); // Abre la página en una nueva pestaña
+        event.preventDefault(); // Evita que el formulario se envíe
+        window.open("{% url 'registro' %}", '_blank'); // Abre la página en una nueva pestaña
     }
   </script>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="{% url 'index' %}"></a>
         <strong>Game On</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -38,18 +40,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorías
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="accion.html">Acción</a></li>
-              <li><a class="dropdown-item" href="familiar.html">Familiar</a></li>
-              <li><a class="dropdown-item" href="deportes.html">Deportes</a></li>
-              <li><a class="dropdown-item" href="horror.html">Horror</a></li>
-              <li><a class="dropdown-item" href="rpg1.html">RPG</a></li>
+              <li><a class="dropdown-item" href="{% url 'accion' %}">Acción</a></li>
+              <li><a class="dropdown-item" href="{% url 'familiar' %}">Familiar</a></li>
+              <li><a class="dropdown-item" href="{% url 'deportes' %}">Deportes</a></li>
+              <li><a class="dropdown-item" href="{% url 'horror' %}">Horror</a></li>
+              <li><a class="dropdown-item" href="{% url 'rpg1' %}">RPG</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -67,7 +69,8 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <img src="img/banner.png" class="card-img" alt="banner">
+        <img src="{% static 'core/img/banner.png'%}" class="card-img" alt="banner">
+        
       </div>
     </div>
   </div>
@@ -83,7 +86,7 @@
       <!-- God of War: Ragnarok -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/godofwar.png" alt="God of War" class="img-fluid" style="object-fit: cover; height: 300px;">
+          <img src="{% static 'core/img/godofwar.png'%}" alt="God of War" class="img-fluid" style="object-fit: cover; height: 300px;">          
           <div class="card-body d-flex flex-column">
             <h2 class="card-title">God of War</h2>
             <p class="card-text">
@@ -100,7 +103,8 @@
       <!-- The Last of Us -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/thelastofus.png" alt="The Last of Us" class="img-fluid"
+          <img src="{% static 'core/img/thelastofus.png'%}" alt="The Last of Us" class="img-fluid"        
+
             style="object-fit: cover; height: 300px;">
           <div class="card-body d-flex flex-column">
             <h2 class="card-title">The Last of Us</h2>
@@ -117,7 +121,7 @@
       <!-- Devil May Cry 3 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/dvm3.png" alt="Devil May Cry 3" class="img-fluid" style="object-fit: cover; height: 300px;">
+          <img src="{% static 'core/img/dvm3.png'%}" alt="Devil May Cry 3" class="img-fluid" style="object-fit: cover; height: 300px;">          
           <div class="card-body d-flex flex-column">
             <h2 class="card-title">Devil May Cry 3</h2>
             <p class="card-text">
@@ -136,7 +140,7 @@
       <!-- GTA 4 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/gta4.png" alt="GTA 4" class="img-fluid" style="object-fit: cover; height: 300px;">
+          <img src="{% static 'core/img/gta4.png'%}" alt="GTA 4" class="img-fluid" style="object-fit: cover; height: 300px;">        
           <div class="card-body d-flex flex-column">
             <h2 class="card-title">Grand Theft Auto IV</h2>
             <p class="card-text">
