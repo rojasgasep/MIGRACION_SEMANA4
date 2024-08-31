@@ -1,18 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+    <link rel="stylesheet" src="{% static 'core/css/style.css'%}">
     <title>Game on Categoria RPG</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="{% static 'core/js/jquery.js'%}"></script>
 </head>
 
-<body id="fondo" background="img/background.png">
+<body id="fondo" background="{% static 'core/img/background.png'%}">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{% url 'index' %}">
                 <strong>Game On</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -31,11 +34,11 @@
                             Categorías
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="accion.html">Acción</a></li>
-                            <li><a class="dropdown-item" href="familiar.html">Familiar</a></li>
-                            <li><a class="dropdown-item" href="deportes.html">Deportes</a></li>
-                            <li><a class="dropdown-item" href="horror.html">Horror</a></li>
-                            <li><a class="dropdown-item" href="rpg1.html">RPG</a></li>
+                            <li><a class="dropdown-item" href="{% url 'accion' %}">Acción</a></li>
+                            <li><a class="dropdown-item" href="{% url 'familiar' %}">Familiar</a></li>
+                            <li><a class="dropdown-item" href="{% url 'deportes' %}">Deportes</a></li>
+                            <li><a class="dropdown-item" href="{% url 'horror' %}">Horror</a></li>
+                            <li><a class="dropdown-item" href="{% url 'rpg1' %}">RPG</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,7 +56,7 @@
     <div class="row">
         <div class="col-12">
           <div class="card">
-            <img src="img/banner.png" class="card-img" alt="banner">
+            <img src="{% static 'core/img/banner.png'%}" class="card-img" alt="banner">
           </div>
         </div>
     </div>
@@ -62,7 +65,7 @@
         <div class="row">
             <div class="col-md-6">
                 <!-- Imagen a la izquierda -->
-                <img src="img/baldurs-gate.png" width="100%" alt="Baldurs Gate">
+                <img src="{% static 'core/img/baldurs-gate.png'%}" width="100%" alt="Baldurs Gate">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
                 <!-- Título, descripción, precio y botón de agregar al carrito a la derecha -->
@@ -82,10 +85,10 @@
     </div>
     <br>
     <div class="image-gallery">
-    <img src="img/bg1.jpg" alt="fall guys 1">
-    <img src="img/bg2.jpg" alt="fall guys 2">
-    <img src="img/bg3.jpg" alt="fall guys 3">
-    <img src="img/bg4.jpg" alt="fall guys 4">
+    <img src="{% static 'core/img/bg1.jpg'%}" alt="fall guys 1">
+    <img src="{% static 'core/img/bg2.jpg'%}" alt="fall guys 2">
+    <img src="{% static 'core/img/bg3.jpg'%}" alt="fall guys 3">
+    <img src="{% static 'core/img/bg4.jpg'%}" alt="fall guys 4">
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

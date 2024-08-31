@@ -1,6 +1,6 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
-<html lang="esn">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
     <br>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{% url 'index' %}">
           <strong>Game On</strong>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -41,18 +41,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorías
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="accion.html">Acción</a></li>
-                <li><a class="dropdown-item" href="familiar.html">Familiar</a></li>
-                <li><a class="dropdown-item" href="deportes.html">Deportes</a></li>
-                <li><a class="dropdown-item" href="horror.html">Horror</a></li>
-                <li><a class="dropdown-item" href="rpg1.html">RPG</a></li>
+                <li><a class="dropdown-item" href="{% url 'accion' %}">Acción</a></li>
+                <li><a class="dropdown-item" href="{% url 'familiar' %}">Familiar</a></li>
+                <li><a class="dropdown-item" href="{% url 'deportes' %}">Deportes</a></li>
+                <li><a class="dropdown-item" href="{% url 'horror' %}">Horror</a></li>
+                <li><a class="dropdown-item" href="{% url 'rpg1' %}">RPG</a></li>
               </ul>
             </li>
             <li class="nav-item">

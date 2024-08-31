@@ -25,16 +25,16 @@ def rpg1(request):
     return render(request, 'core/rpg1.html')
 
 def registro(request):
-    return render(request, 'registro.html')
+    return render(request, 'core/registro.html')
 
 def baldursgate(request):
-    return render(request, 'baldursgate.html')
+    return render(request, 'core/baldursgate.html')
 
 def fallguys(request):
-    return render(request, 'fallguys.html')
+    return render(request, 'core/fallguys.html')
 
 def godofwar(request):
-    return render(request, 'godofwar.html')
+    return render(request, 'core/godofwar.html')
 
 
 
